@@ -2,7 +2,7 @@ def nyc_pigeon_organizer(data)
   # write your code here!
   new_hash = {}
   data.each do |key, value|
-    value.each do |new_value, names|
+    value.each do |updated_value, names|
       names.each do |name|
 
         if !new_hash[name]
@@ -13,7 +13,7 @@ def nyc_pigeon_organizer(data)
           new_hash[name][key] = []
         end
 
-        new_hash[name][key] << new_value.to_s
+        new_hash[name][key] << updated_value.to_s
 
       end
     end
